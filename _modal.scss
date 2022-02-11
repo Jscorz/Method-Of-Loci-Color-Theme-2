@@ -123,8 +123,13 @@
   visibility: hidden;
 
   @media only screen and (max-width: 1400px) {
-    bottom: 620%;
-    left: 150%;
+    bottom: 700%;
+    right: 100%;
+  }
+
+  @media only screen and (max-width: 550px) {
+    bottom: 700%;
+    left: -155%;
   }
   &box {
     display: flex;
