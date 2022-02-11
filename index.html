@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+    <link rel="shortcut icon" type="image/png" href="images/ardour.svg" />
+    <title>Card randomizer to practice method of loci</title>
+  </head>
+  <body class="grid">
+    <!-- <main class="grid"> -->
+    <div class="grid__container">
+      <div class="title">
+        <h1 class="title__main margin-right">
+          Practice method of loci memory technique
+        </h1>
+      </div>
+
+      <a href="#" class="button button-1"
+        ><button class="grid__container--item item-1">1</button></a
+      >
+      <a href="#" class="button button-2"
+        ><button class="grid__container--item item-2 margin-right">2</button></a
+      >
+      <a href="#" class="button button-3"
+        ><button class="grid__container--item item-3">3</button></a
+      >
+      <a href="#" class="button button-4"
+        ><button class="grid__container--item item-4 margin-right">4</button></a
+      >
+      <a href="#" class="button button-5"
+        ><button class="grid__container--item item-5">5</button></a
+      >
+      <a href="#" class="button button-6"
+        ><button class="grid__container--item item-6 margin-right">6</button></a
+      >
+      <a href="#" class="button button-7"
+        ><button class="grid__container--item item-7">7</button></a
+      >
+      <a href="#" class="button button-8"
+        ><button class="grid__container--item item-8 margin-right">8</button></a
+      >
+      <a href="#" class="button button-9"
+        ><button class="grid__container--item item-9">9</button></a
+      >
+      <a href="#" class="button button-10"
+        ><button class="grid__container--item item-10 margin-right">
+          10
+        </button></a
+      >
+      <a href="#" class="button button-11"
+        ><button class="grid__container--item item-11">
+          completed story
+          <div class="story" id="comp-story">
+            after 10 sentence submissions: click 'completed story' button
+          </div>
+        </button></a
+      >
+    </div>
+    <modal class="modal">
+      <div class="modal__container" id="modal__container">
+        <div class="modal__container-">
+          <div class="modal__container-card">
+            <img
+              src="/images/image-1.png"
+              alt="card here"
+              class="modal__container-card-image-1 active"
+              id="modal__container-card-image-1"
+            />
+            <img
+              src="/images/image-2.png"
+              alt="card here"
+              class="modal__container-card-image-2 hidden"
+              id="modal__container-card-image-2"
+            />
+            <img
+              src="/images/image-3.png"
+              alt="card here"
+              class="modal__container-card-image-3 hidden"
+              id="modal__container-card-image-3"
+            />
+            <img
+              src="/images/image-4.png"
+              alt="card here"
+              class="modal__container-card-image-4 hidden"
+              id="modal__container-card-image-4"
+            />
+            <img
+              src="/images/image-5.png"
+              alt="card here"
+              class="modal__container-card-image-5 hidden"
+              id="modal__container-card-image-5"
+            />
+            <img
+              src="/images/image-6.png"
+              alt="card here"
+              class="modal__container-card-image-6 hidden"
+              id="modal__container-card-image-6"
+            />
+            <img
+              src="/images/image-7.png"
+              alt="card here"
+              class="modal__container-card-image-7 hidden"
+              id="modal__container-card-image-7"
+            />
+            <img
+              src="/images/image-8.png"
+              alt="card here"
+              class="modal__container-card-image-8 hidden"
+              id="modal__container-card-image-8"
+            />
+            <img
+              src="/images/image-9.png"
+              alt="card here"
+              class="modal__container-card-image-9 hidden"
+              id="modal__container-card-image-9"
+            />
+            <img
+              src="/images/image-10.png"
+              alt="card here"
+              class="modal__container-card-image-10 hidden"
+              id="modal__container-card-image-10"
+            />
+            <div class="rules__click-here-now">
+              <button value="Rules" class="modal__container-button-2">
+                Rules
+              </button>
+              <div class="text">
+                <div class="textbox">
+                  <h1 class="textbox-header">Rules</h1>
+                  <p class="textbox-rules">
+                    There is one card on the screen. You want to make a creative
+                    story based on a location you know like the back of your
+                    hand, such as your home. Cards in the story will be based
+                    off of objects/areas in your location with 1 sentence per
+                    card. The object is to be able to memorize the cards in the
+                    order your viewed them.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <form id="oneSentence" class="form">
+              <input
+                type="text"
+                name="submitSentence"
+                class="form__textinput"
+                autocomplete="off"
+              />
+              <button class="form__submit">SUBMIT</button>
+            </form>
+
+            <button class="modal__container-button return-button">
+              RETURN
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </modal>
+
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
