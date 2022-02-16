@@ -1,0 +1,198 @@
+.modal__container,
+.modal__container-2 {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#modal__container,
+#modal__container-2 {
+  content: '';
+  height: 120vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      rgba(141, 232, 255, 0.82),
+      rgba(54, 205, 50, 0.7)
+    ),
+    url('images/patternpad.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.modal__container- {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  &card {
+    background-image: linear-gradient(
+        to right,
+        rgba(139, 25, 220, 0.808),
+        rgba(242, 230, 251, 0.808)
+      ),
+      url('../images/start-spiral.jpg');
+    height: 60rem;
+    width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20rem;
+    border: 4px solid royalblue;
+
+    &-image {
+      &-1 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-2 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-3 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-4 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-5 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-6 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-7 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-8 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-9 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+
+      &-10 {
+        height: 40%;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.active {
+  position: relative;
+  display: '';
+}
+
+.hidden {
+  position: relative;
+  visibility: hidden;
+  display: none;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  max-height: 30%;
+  display: '';
+  position: absolute;
+  bottom: 480%;
+  left: 200%;
+  visibility: hidden;
+
+  @media only screen and (max-width: 1400px) {
+    bottom: 700%;
+    right: 100%;
+  }
+
+  @media only screen and (max-width: 550px) {
+    bottom: 700%;
+    left: -155%;
+  }
+  &box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 40%;
+    width: 9vw;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    background-color: white;
+
+    @media only screen and (max-width: 1400px) {
+      max-height: 30%;
+      width: 15vw;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      border-radius: 1rem;
+    }
+    &-rules {
+      font-size: 1.2rem;
+    }
+  }
+}
+.rules__click-here-now {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 1rem;
+
+  &__label {
+    font-size: 1.6rem;
+    color: #fff;
+  }
+
+  &__submit {
+    border: 1px solid black;
+    background-color: #8b19dc;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(crimson, 1),
+        rgba(royalblue, 1)
+      );
+    }
+  }
+  &__textinput {
+    background-color: #d8b3f3;
+  }
+}
