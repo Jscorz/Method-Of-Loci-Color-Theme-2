@@ -7,8 +7,8 @@ I had been practicing building up memory through method of loci technique, which
 <!-- <img src="/images/MOL-screenshot.png">
 ![alt text](https://github.com/Jscorz/MethodOfLociSim/blob/MOL-screenshot.png?raw=true) -->
 
-![alt text](MOL-screenshot3.png)
-![alt text](MOL-screenshot2.png)MOL
+![alt text](/images/MOL-screenshot3.png)
+![alt text](/images/MOL-screenshot2.png)
 
 ---
 
