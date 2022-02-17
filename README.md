@@ -2,7 +2,7 @@
 
 I had been practicing building up memory through method of loci technique, which involves building a story about the subjects I was trying to memorize. I was using a deck of cards online and a note editor to practice, so I built out an app to do it all on one user interface.
 
-**Link to project: [Github]https://jscorz-mol.netlify.app**
+**Link to project: [Live-demo]https://jscorz-mol.netlify.app**
 
 <!-- <img src="/images/MOL-screenshot.png">
 ![alt text](https://github.com/Jscorz/MethodOfLociSim/blob/MOL-screenshot.png?raw=true) -->
