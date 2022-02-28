@@ -208,17 +208,6 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-let randomNumberOne = getRandomInt(1, 70);
-let randomNumberTwo = getRandomInt(1, 70);
-let randomNumberThree = getRandomInt(1, 70);
-let randomNumberFour = getRandomInt(1, 70);
-let randomNumberFive = getRandomInt(1, 70);
-let randomNumberSix = getRandomInt(1, 70);
-let randomNumberSeven = getRandomInt(1, 70);
-let randomNumberEight = getRandomInt(1, 70);
-let randomNumberNine = getRandomInt(1, 70);
-let randomNumberTen = getRandomInt(1, 70);
-
 clickHereFirst.addEventListener('click', function () {
   if (clickHereFirst.textContent.toLowerCase() === 'rules') {
     rules.style.visibility = 'visible';
