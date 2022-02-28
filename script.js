@@ -1,7 +1,6 @@
 ' use strict';
 
 let buttonGroup = [];
-let imageGroup = [];
 let sentenceGroup = [];
 
 const button1 = document.querySelector('.item-1');
@@ -28,37 +27,22 @@ buttonGroup.push(
   button10
 );
 
-const image1 = document.querySelector('.modal__container-card-image-1');
-const image2 = document.querySelector('.modal__container-card-image-2');
-const image3 = document.querySelector('.modal__container-card-image-3');
-const image4 = document.querySelector('.modal__container-card-image-4');
-const image5 = document.querySelector('.modal__container-card-image-5');
-const image6 = document.querySelector('.modal__container-card-image-6');
-const image7 = document.querySelector('.modal__container-card-image-7');
-const image8 = document.querySelector('.modal__container-card-image-8');
-const image9 = document.querySelector('.modal__container-card-image-9');
-const image10 = document.querySelector('.modal__container-card-image-10');
-
-imageGroup.push(
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10
-);
+let image1 = document.querySelector('.modal__container-card-image-1');
+let image2 = document.querySelector('.modal__container-card-image-2');
+let image3 = document.querySelector('.modal__container-card-image-3');
+let image4 = document.querySelector('.modal__container-card-image-4');
+let image5 = document.querySelector('.modal__container-card-image-5');
+let image6 = document.querySelector('.modal__container-card-image-6');
+let image7 = document.querySelector('.modal__container-card-image-7');
+let image8 = document.querySelector('.modal__container-card-image-8');
+let image9 = document.querySelector('.modal__container-card-image-9');
+let image10 = document.querySelector('.modal__container-card-image-10');
 
 let modalContainer = document.querySelector('.modal__container');
 let rules = document.querySelector('.text');
 
 let returnButton = document.querySelector('.return-button');
 let clickHereFirst = document.querySelector('.modal__container-button-2');
-let cardImage = document.querySelector('.modal__container-card-image');
-let image = document.getElementById('#modal__container-card-image');
 
 const modalPopDown = function () {
   modalContainer.style.zIndex = '';
@@ -67,308 +51,162 @@ const modalPopDown = function () {
   modalContainer.style.visibility = 'hidden';
 };
 
+returnButton.addEventListener('click', modalPopDown);
+
+buttonGroup.forEach(function (e) {
+  e.addEventListener('click', function () {
+    modalContainer.style.zIndex = '';
+    modalContainer.style.zIndex = 30;
+    modalContainer.style.visibility = '';
+    modalContainer.style.visibility = 'visible';
+  });
+});
+
+button1.addEventListener('click', function () {
+  image1.classList.replace('hidden', 'active');
+
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button2.addEventListener('click', function () {
+  image2.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button3.addEventListener('click', function () {
+  image3.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button4.addEventListener('click', function () {
+  image4.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button5.addEventListener('click', function () {
+  image5.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button6.addEventListener('click', function () {
+  image6.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button7.addEventListener('click', function () {
+  image7.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button8.addEventListener('click', function () {
+  image8.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button9.addEventListener('click', function () {
+  image9.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image10.classList.replace('active', 'hidden');
+});
+
+button10.addEventListener('click', function () {
+  image10.classList.replace('hidden', 'active');
+
+  image1.classList.replace('active', 'hidden');
+  image2.classList.replace('active', 'hidden');
+  image3.classList.replace('active', 'hidden');
+  image4.classList.replace('active', 'hidden');
+  image5.classList.replace('active', 'hidden');
+  image6.classList.replace('active', 'hidden');
+  image7.classList.replace('active', 'hidden');
+  image8.classList.replace('active', 'hidden');
+  image9.classList.replace('active', 'hidden');
+});
+
 function getRandomInt(min, max) {
   min = Math.ceil(1);
   max = Math.floor(70);
   return Math.floor(Math.random() * (max - min) + min);
 }
-
-button2.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('hidden', 'active');
-});
-
-button3.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('hidden', 'active');
-});
-
-button4.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('hidden', 'active');
-});
-
-button5.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('hidden', 'active');
-});
-
-button6.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('hidden', 'active');
-});
-
-button7.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('hidden', 'active');
-});
-
-button8.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('hidden', 'active');
-});
-
-button9.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('hidden', 'active');
-});
-
-button10.addEventListener('click', function () {
-  document
-    .querySelector('.modal__container-card-image-1')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-2')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-3')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-4')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-5')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-6')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-7')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-8')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-9')
-    .classList.replace('active', 'hidden');
-  document
-    .querySelector('.modal__container-card-image-10')
-    .classList.replace('hidden', 'active');
-});
 
 let randomNumberOne = getRandomInt(1, 70);
 let randomNumberTwo = getRandomInt(1, 70);
@@ -381,71 +219,27 @@ let randomNumberEight = getRandomInt(1, 70);
 let randomNumberNine = getRandomInt(1, 70);
 let randomNumberTen = getRandomInt(1, 70);
 
-buttonGroup.forEach(function (e) {
-  e.addEventListener('click', function () {
-    modalContainer.style.zIndex = '';
-    modalContainer.style.zIndex = 30;
-    modalContainer.style.visibility = '';
-    modalContainer.style.visibility = 'visible';
-    // e.textContent = 'checked';
-  });
+clickHereFirst.addEventListener('click', function () {
+  if (clickHereFirst.textContent.toLowerCase() === 'rules') {
+    rules.style.visibility = 'visible';
+    clickHereFirst.textContent = 'hide rules';
+  } else {
+    rules.style.visibiliy = '';
+    rules.style.visibility = 'hidden';
+    clickHereFirst.textContent = 'Rules';
+  }
 });
 
-returnButton.addEventListener('click', modalPopDown);
-
-document
-  .querySelector('.modal__container-button-2')
-  .addEventListener('click', function () {
-    if (clickHereFirst.textContent.toLowerCase() == 'rules') {
-      rules.style.visibility = '';
-      rules.style.visibility = 'visible';
-      clickHereFirst.textContent = 'hide rules';
-    } else {
-      rules.style.visibiliy = '';
-      rules.style.visibility = 'hidden';
-      clickHereFirst.textContent = 'Rules';
-    }
-  });
-
-document.getElementById(
-  'modal__container-card-image-1'
-).src = `../images/image-${randomNumberOne}.png`;
-
-document.getElementById(
-  'modal__container-card-image-2'
-).src = `../images/image-${randomNumberTwo}.png`;
-
-document.getElementById(
-  'modal__container-card-image-3'
-).src = `../images/image-${randomNumberThree}.png`;
-
-document.getElementById(
-  'modal__container-card-image-4'
-).src = `../images/image-${randomNumberFour}.png`;
-
-document.getElementById(
-  'modal__container-card-image-5'
-).src = `../images/image-${randomNumberFive}.png`;
-
-document.getElementById(
-  'modal__container-card-image-6'
-).src = `../images/image-${randomNumberSix}.png`;
-
-document.getElementById(
-  'modal__container-card-image-7'
-).src = `../images/image-${randomNumberSeven}.png`;
-
-document.getElementById(
-  'modal__container-card-image-8'
-).src = `../images/image-${randomNumberEight}.png`;
-
-document.getElementById(
-  'modal__container-card-image-9'
-).src = `../images/image-${randomNumberNine}.png`;
-
-document.getElementById(
-  'modal__container-card-image-10'
-).src = `../images/image-${randomNumberTen}.png`;
+image1.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image2.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image3.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image4.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image5.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image6.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image7.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image8.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image9.src = `../images/image-${getRandomInt(1, 70)}.png`;
+image10.src = `../images/image-${getRandomInt(1, 70)}.png`;
 
 document.querySelector('#oneSentence').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -453,21 +247,17 @@ document.querySelector('#oneSentence').addEventListener('submit', function (e) {
     text: e.target.elements.submitSentence.value,
   });
 
-  // }); POSSIBLY PUT THIS INTO IT'S OWN FUNCTION THAT RUNS WHEN BUTTON 10 IS CLICKED
-
   e.target.elements.submitSentence.value = '';
-  console.log(sentenceGroup);
 });
 
 document.querySelector('.item-11').addEventListener('click', function () {
   if (sentenceGroup.length >= 10) {
     document.querySelector('#comp-story').textContent = '';
     const p = document.createElement('p');
+
     sentenceGroup.forEach(function (sent) {
       p.textContent += sent.text;
-      console.log(p);
     });
     document.querySelector('#comp-story').appendChild(p);
   }
 });
-
