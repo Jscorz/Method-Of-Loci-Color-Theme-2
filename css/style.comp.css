@@ -7,28 +7,34 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 body {
-  padding: clamp(1rem, 2vw, 3rem);
-  font-family: "Nunito", sans-serif; }
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 body {
   position: relative; }
 
 .modal__container-button {
-  padding: 3rem 2rem;
-  margin-top: 2rem;
-  background-image: radial-gradient(#0407c9, white);
-  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  background-color: #8b19dc;
+  border-radius: 1rem;
+  border: 1px solid black;
   cursor: pointer;
   color: white; }
 
 .modal__container-button-2 {
-  font-weight: 700;
-  margin: 2rem 0;
+  font-weight: 500;
+  margin: 0.5rem 0 1.5rem;
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: #8b19dc;
+  color: white;
+  border: 1px solid black;
   cursor: pointer;
   border-radius: 2rem; }
 
@@ -36,7 +42,7 @@ body {
   font-weight: 700;
   margin: 2rem 1rem;
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: #bf80ec;
   cursor: pointer;
   border-radius: 2rem; }
 
@@ -52,73 +58,237 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: "Nunito", sans-serif; }
+  font-family: 'Nunito', sans-serif; }
 
 body {
   position: relative; }
 
 .grid {
-  height: 100vh;
-  background-image: linear-gradient(rgba(238, 129, 238, 0.7), rgba(54, 205, 50, 0.7)), url("../images/patternpad.png"); }
+  min-height: 100vh;
+  min-width: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  @media only screen and (max-width: 800px) {
+    .grid {
+      min-width: 0;
+      height: 800px; } }
 
 .grid__container {
+  grid-column: 1 / -1;
+  grid-row: 1 / 10;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  grid-template-rows: repeat(12, minmax(min-content, 1fr));
   align-content: center;
   justify-items: center;
-  height: 100%;
-  width: 100%;
+  min-width: 0;
   gap: 5rem;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  border: 1rem solid rgba(121, 14, 197, 0);
+  background-image: linear-gradient(to right bottom, rgba(242, 230, 251, 0.773), rgba(139, 24, 220, 0.808)), url("../images/patternpad.png"); }
+  @media only screen and (max-width: 800px) {
+    .grid__container {
+      justify-content: center;
+      min-width: 80rem; } }
+  @media only screen and (max-width: 700px) {
+    .grid__container {
+      justify-content: center;
+      min-width: 70rem; } }
+  @media only screen and (max-width: 600px) {
+    .grid__container {
+      justify-content: center;
+      min-width: 60rem;
+      gap: 2rem; } }
+  @media only screen and (max-width: 500px) {
+    .grid__container {
+      justify-content: center;
+      min-width: 50rem; } }
+  @media only screen and (max-width: 400px) {
+    .grid__container {
+      justify-content: center;
+      min-width: 40rem; } }
+  @media only screen and (max-width: 300px) {
+    .grid__container {
+      justify-content: center;
+      min-width: 30rem; } }
 
 .grid__container--item {
-  background-image: linear-gradient(to right bottom, #6246ea, #e45858);
+  background-color: #8b19dc;
   font-size: 3rem;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 1rem 3rem;
-  border-radius: 5rem;
-  z-index: 20; }
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  z-index: 20;
+  transition: background 0.5s ease, color 0.5s ease; }
+  @media only screen and (max-width: 800px) {
+    .grid__container--item {
+      font-size: 2rem;
+      padding: 1rem 2.5rem; } }
+  @media only screen and (max-width: 600px) {
+    .grid__container--item {
+      font-size: 2rem;
+      padding: 0.75rem 1.5rem; } }
 
 .grid__container--item:hover {
   cursor: pointer;
-  transform: scale(1.03);
   background-image: linear-gradient(to left top, #6246ea, #e45858); }
 
 .button-1 {
+  grid-column: 4 / 5;
   grid-row: 2 / 3; }
+  @media only screen and (max-width: 600px) {
+    .button-1 {
+      grid-column: 5 / 6; } }
+  @media only screen and (max-width: 400px) {
+    .button-1 {
+      transform: translateX(40%); } }
 
 .button-2 {
+  grid-column: 9 / 10;
   grid-row: 2 / 3; }
+  @media only screen and (max-width: 600px) {
+    .button-2 {
+      grid-column: 6 / 7; } }
+  @media only screen and (max-width: 400px) {
+    .button-2 {
+      transform: translateX(40%); } }
 
 .button-3 {
+  grid-column: 4 / 5;
   grid-row: 3 / 4; }
+  @media only screen and (max-width: 600px) {
+    .button-3 {
+      grid-column: 5 / 6; } }
+  @media only screen and (max-width: 400px) {
+    .button-3 {
+      transform: translateX(40%); } }
 
 .button-4 {
+  grid-column: 9 / 10;
   grid-row: 3 / 4; }
+  @media only screen and (max-width: 600px) {
+    .button-4 {
+      grid-column: 6 / 7; } }
+  @media only screen and (max-width: 400px) {
+    .button-4 {
+      transform: translateX(40%); } }
 
 .button-5 {
+  grid-column: 4 / 5;
   grid-row: 4 / 5; }
+  @media only screen and (max-width: 600px) {
+    .button-5 {
+      grid-column: 5 / 6; } }
+  @media only screen and (max-width: 400px) {
+    .button-5 {
+      transform: translateX(40%); } }
 
 .button-6 {
+  grid-column: 9 / 10;
   grid-row: 4 / 5; }
+  @media only screen and (max-width: 600px) {
+    .button-6 {
+      grid-column: 6 / 7; } }
+  @media only screen and (max-width: 400px) {
+    .button-6 {
+      transform: translateX(40%); } }
 
 .button-7 {
+  grid-column: 4 / 5;
   grid-row: 5 / 6; }
+  @media only screen and (max-width: 600px) {
+    .button-7 {
+      grid-column: 5 / 6; } }
+  @media only screen and (max-width: 400px) {
+    .button-7 {
+      transform: translateX(40%); } }
 
 .button-8 {
+  grid-column: 9 / 10;
   grid-row: 5 / 6; }
+  @media only screen and (max-width: 600px) {
+    .button-8 {
+      grid-column: 6 / 7; } }
+  @media only screen and (max-width: 400px) {
+    .button-8 {
+      transform: translateX(40%); } }
 
 .button-9 {
+  grid-column: 4 / 5;
   grid-row: 6 / 7; }
+  @media only screen and (max-width: 600px) {
+    .button-9 {
+      grid-column: 5 / 6; } }
+  @media only screen and (max-width: 400px) {
+    .button-9 {
+      transform: translateX(40%); } }
 
 .button-10 {
+  grid-column: 9 / 10;
   grid-row: 6 / 7; }
+  @media only screen and (max-width: 600px) {
+    .button-10 {
+      grid-column: 6 / 7; } }
+  @media only screen and (max-width: 600px) and (max-width: 400px) {
+    .button-10 {
+      transform: translateX(40%); } }
+
+.button-11 {
+  grid-column: 1 / -1;
+  grid-row: 7 / 8;
+  justify-items: center;
+  transform: translateY(10%);
+  margin-right: 2rem; }
+  @media only screen and (max-width: 600px) {
+    .button-11 {
+      transform: translateX(-15%); } }
+  @media only screen and (max-width: 400px) {
+    .button-11 {
+      transform: translateX(0%); } }
+
+.title {
+  grid-column: 1 / -1;
+  justify-content: center; }
+  .title__main {
+    font-size: clamp(1rem, 5vw, 4rem);
+    color: white;
+    background-color: #b266e8;
+    border: 1px solid black;
+    padding: 0 2rem;
+    transform: translateY(50%); }
+    @media only screen and (max-width: 800px) {
+      .title__main {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-top: 2rem; } }
+    @media only screen and (max-width: 600px) {
+      .title__main {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: 2rem;
+        transform: translateX(-17%); } }
+    @media only screen and (max-width: 500px) {
+      .title__main {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: 2rem;
+        transform: translateX(-10%); } }
+    @media only screen and (max-width: 400px) {
+      .title__main {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-top: 2rem;
+        transform: translateX(-5%); } }
+    @media only screen and (max-width: 355px) {
+      .title__main {
+        transform: translateX(-7%); } }
 
 .modal__container,
 .modal__container-2 {
-  content: "";
+  content: '';
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -128,10 +298,10 @@ body {
 
 #modal__container,
 #modal__container-2 {
-  content: "";
+  content: '';
   height: 120vh;
   width: 100vw;
-  background-image: linear-gradient(rgba(238, 129, 238, 0.7), rgba(54, 205, 50, 0.7)), url("images/patternpad.png");
+  background-image: linear-gradient(rgba(141, 232, 255, 0.82), rgba(54, 205, 50, 0.7)), url("images/patternpad.png");
   position: absolute;
   top: 0;
   left: 0;
@@ -143,7 +313,7 @@ body {
   align-content: center;
   justify-content: center; }
   .modal__container-card {
-    background-image: linear-gradient(to right, rgba(167, 134, 223, 0.8), rgba(46, 103, 235, 0.8)), url("../images/start-spiral.jpg");
+    background-image: linear-gradient(to right, rgba(139, 25, 220, 0.808), rgba(242, 230, 251, 0.808)), url("../images/start-spiral.jpg");
     height: 60rem;
     width: 80rem;
     display: flex;
@@ -185,7 +355,7 @@ body {
 
 .active {
   position: relative;
-  display: ""; }
+  display: ''; }
 
 .hidden {
   position: relative;
@@ -196,21 +366,36 @@ body {
   display: flex;
   flex-direction: row;
   max-height: 30%;
-  display: "";
+  display: '';
   position: absolute;
-  bottom: 415%;
-  left: 150%;
+  bottom: 480%;
+  left: 200%;
   visibility: hidden; }
+  @media only screen and (max-width: 1400px) {
+    .text {
+      bottom: 700%;
+      right: 100%; } }
+  @media only screen and (max-width: 550px) {
+    .text {
+      bottom: 700%;
+      left: -155%; } }
   .textbox {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: white;
     height: 40%;
     width: 9vw;
     padding: 1.5rem;
-    border-radius: 3rem; }
+    border-radius: 3rem;
+    background-color: white; }
+    @media only screen and (max-width: 1400px) {
+      .textbox {
+        max-height: 30%;
+        width: 15vw;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        border-radius: 1rem; } }
     .textbox-rules {
       font-size: 1.2rem; }
 
@@ -221,4 +406,89 @@ body {
   position: relative; }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem; }
+  .form__label {
+    font-size: 1.6rem;
+    color: #fff; }
+  .form__submit {
+    border: 1px solid black;
+    background-color: #8b19dc;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    border-radius: 1rem; }
+    .form__submit:hover, .form__submit:active {
+      cursor: pointer;
+      background-image: linear-gradient(to right bottom, crimson, royalblue); }
+  .form__textinput {
+    background-color: #d8b3f3; }
+
+.story {
+  background-color: rgba(255, 255, 255, 0.705);
+  color: black;
+  border-radius: 1rem;
+  position: absolute;
+  right: -25%;
+  top: -710%;
+  width: 150%;
+  max-height: 800%;
+  text-align: center;
+  font-size: clamp(0.5rem, 5vw, 1.25rem);
+  letter-spacing: 1px;
+  padding: 2rem;
+  box-shadow: 2px grey; }
+  @media only screen and (max-width: 1200px) {
+    .story {
+      right: 0%;
+      top: -850%;
+      width: 100%;
+      max-height: 800%; } }
+  @media only screen and (max-width: 900px) {
+    .story {
+      top: -970%;
+      left: 12%;
+      max-height: 1000%;
+      width: 80%; } }
+  @media only screen and (max-width: 800px) {
+    .story {
+      top: -1050%;
+      left: 2%;
+      max-height: 1000%;
+      width: 100%; } }
+  @media only screen and (max-width: 600px) {
+    .story {
+      font-size: 1rem;
+      width: 194%;
+      top: 120%;
+      left: -50%; } }
+  @media only screen and (max-width: 500px) {
+    .story {
+      font-size: 1rem;
+      width: 194%;
+      top: 120%;
+      left: -50%; } }
+  @media only screen and (max-width: 400px) {
+    .story {
+      font-size: 1rem;
+      width: 185%;
+      top: 120%;
+      left: -40%;
+      padding: 0.25rem; } }
+  @media only screen and (max-width: 355px) {
+    .story {
+      font-size: 1rem;
+      width: 150%;
+      top: 120%;
+      left: -35%;
+      padding: 0.25rem; } }
+  @media only screen and (max-width: 300px) {
+    .story {
+      font-size: 1rem;
+      width: 150%;
+      top: 120%;
+      left: -18%;
+      padding: 0.25rem; } }
