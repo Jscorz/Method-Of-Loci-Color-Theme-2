@@ -4,11 +4,13 @@ I had been practicing building up memory through method of loci technique, which
 
 **Link to project: [Live-demo]https://jscorz-mol.netlify.app**
 
-<!-- <img src="/images/MOL-screenshot.png">
-![alt text](https://github.com/Jscorz/MethodOfLociSim/blob/MOL-screenshot.png?raw=true) -->
+|                 Desktop                  |                Mobile                |
+| :--------------------------------------: | :----------------------------------: |
+| ![alt text](/images/MOL-screenshot3.png) | ![meals2u2](/images/MOL-mobile1.png) |
 
-![alt text](/images/MOL-screenshot3.png)
-![alt text](/images/MOL-screenshot2.png)
+|                 Desktop                  |                Mobile                |
+| :--------------------------------------: | :----------------------------------: |
+| ![alt text](/images/MOL-screenshot2.png) | ![meals2u2](/images/MOL-mobile2.png) |
 
 ---
 
